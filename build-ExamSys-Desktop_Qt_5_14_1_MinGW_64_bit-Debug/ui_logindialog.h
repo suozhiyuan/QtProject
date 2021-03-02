@@ -54,7 +54,7 @@ public:
         cancelBtn->setGeometry(QRect(240, 160, 75, 23));
         imgLabel = new QLabel(LoginDialog);
         imgLabel->setObjectName(QString::fromUtf8("imgLabel"));
-        imgLabel->setGeometry(QRect(0, 0, 431, 271));
+        imgLabel->setGeometry(QRect(0, 0, 431, 261));
         imgLabel->setPixmap(QPixmap(QString::fromUtf8(":/login.jpg")));
         imgLabel->raise();
         label->raise();

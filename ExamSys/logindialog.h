@@ -15,7 +15,7 @@ public:
     LoginDialog(QWidget *parent = nullptr);
     ~LoginDialog();
 
-private slots:
+private slots:      //私有槽方法
     void on_loginBtn_clicked();
 
 private:
