@@ -9,6 +9,7 @@ LoginDialog::LoginDialog(QWidget *parent) : QDialog(parent), ui(new Ui::LoginDia
     ui->setupUi(this);
     ui->imgLabel->setScaledContents(true);                                                      //填充设置
     this->resize(ui->imgLabel->width(),ui->imgLabel->height());
+    this->setFixedSize(width() ,height());                              //获取宽和高对窗口进行初始化固定
     this->setWindowTitle("标头");
     this->setWindowFlags(Qt::Dialog | Qt::WindowCloseButtonHint);       //普通对话框风格, 不要帮助问号按钮
 }
@@ -54,8 +55,9 @@ void LoginDialog::on_loginBtn_clicked()
         QFile file(filename);                      //用来保存文件的类，并用filename进行初始化
         QTextStream stream(&file);                 //读取文件流，保存到 stream
 
-        if(file.open(QIODevice::ReadOnly | QIODevice::Text))  //打开文件，并且指定要对文件进行哪些操作， ReadOnly 只读， Text 纯文本，返回 ture 打开成功
+        if(file.open(QIODevice::ReadOnly | QIODevice::Text))  //打开文件，并且指定要对文件进行哪些操作， ReadOnly 只读， Text 纯文本
         {
+            bool isWin = false;     //登录成功
             while (!stream.atEnd())
             {
                 strLine = stream.readLine();           //从文件流 stream 中读取一行
@@ -65,25 +67,18 @@ void LoginDialog::on_loginBtn_clicked()
                     if(strCode == strList.at(1))
                     {
                         QMessageBox::information(this,"提示","密码输入正确！");
+                        isWin = true;
                         file.close();                   //关闭文件
                     }
-                    else
-                    {
-                        QMessageBox::information(this,"提示", "账号或密码错误！重新输入");
-                        ui->accountEdit->clear();       //清除账号输入框
-                        ui->codeEdit->clear();          //清除密码输入框
-                        ui->accountEdit->setFocus();    //将焦点转移至输入框
-                        file.close();
-                    }
                 }
-                else
-                {
-                    QMessageBox::information(this,"提示", "账号或密码错误！重新输入");
-                    ui->accountEdit->clear();       //清除账号输入框
-                    ui->codeEdit->clear();          //清除密码输入框
-                    ui->accountEdit->setFocus();    //将焦点转移至输入框
-                    file.close();
-                }
+            }
+            if(!isWin)
+            {
+                QMessageBox::information(this,"提示", "账号或密码错误！重新输入");
+                ui->accountEdit->clear();       //清除账号输入框
+                ui->codeEdit->clear();          //清除密码输入框
+                ui->accountEdit->setFocus();    //将焦点转移至输入框
+                file.close();
             }
         }
         else

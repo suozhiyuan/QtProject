@@ -518,13 +518,11 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_image.cpp qrc_image.cpp
 qrc_image.cpp: ../ExamSys/image.qrc \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/bin/rcc.exe \
-		../ExamSys/login1.png \
 		../ExamSys/login.jpg
 	D:\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\rcc.exe -name image ..\ExamSys\image.qrc -o qrc_image.cpp
 
 qrc_image.cpp: ../ExamSys/image.qrc \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/bin/rcc.exe \
-		../ExamSys/login1.png \
 		../ExamSys/login.jpg
 	D:\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\rcc.exe -name image ..\ExamSys\image.qrc -o qrc_image.cpp
 
@@ -914,7 +912,9 @@ logindialog.o: ../ExamSys/logindialog.cpp ../ExamSys/logindialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QMessageBox \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qmessagebox.h
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qmessagebox.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QFile \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QTextStream
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o logindialog.o ..\ExamSys\logindialog.cpp
 
 qrc_image.o: qrc_image.cpp 
