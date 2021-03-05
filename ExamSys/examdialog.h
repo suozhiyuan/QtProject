@@ -2,6 +2,11 @@
 #define EXAMDIALOG_H
 #include <QDialog>
 #include <QTimer>
+#include <QTextEdit>
+#include <QLabel>
+#include <QRadioButton>
+#include <QCheckBox>
+#include <QGridLayout>
 
 class ExamDialog : public QDialog
 {
@@ -9,10 +14,19 @@ class ExamDialog : public QDialog
 public:
     ExamDialog(QWidget* PARENT = 0);
     void initTimer();       //初始化计时器
+    void initLayout();      //初始化布局管理器
+    bool initTextEdit();    //初始化文本编辑器
 
 private:
-    QTimer* m_timer;        //计时器
-    int m_timeGo;           //已用时
+    QTimer* m_timer;                 //计时器
+    int m_timeGo;                    //已用时
+    QTextEdit* m_textEdit;           //题库显示
+    QLabel* m_titleLabels[10];       //题目标签
+    QRadioButton *m_raidoBtns[32];   //单选题按钮
+    QCheckBox *m_checkBtns[4];       //多选题按钮
+    QRadioButton *m_radioA;          //判断题A选项
+    QRadioButton *m_radioB;          //判断题B选项
+    QGridLayout *m_layout;          //QT的布局管理器
 
 /*
 public slots：在这个区内声明的槽意味着任何对象都可将信号与之相连接。这对于组件编程非常有用，你可以创建彼此互不了解的对象，将它们的信号与槽进行连接以便信息能够正确的传递。
@@ -21,7 +35,6 @@ private slots：在这个区内声明的槽意味着只有类自己可以将信�
 */
 private slots:
     void freshTime();       //私有 响应的槽方法
-
 };
 
 #endif // EXAMDIALOG_H
