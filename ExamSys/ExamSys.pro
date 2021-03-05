@@ -16,10 +16,12 @@ DEFINES += QT_DEPRECATED_WARNINGS       #使用过期API QT将会抛出警告
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \        #源文件
+    examdialog.cpp \
     main.cpp \
     logindialog.cpp
 
 HEADERS += \        #头文件
+    examdialog.h \
     logindialog.h
 
 FORMS += \          #界面文件
