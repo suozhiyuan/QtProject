@@ -650,6 +650,28 @@ moc_examdialog.cpp: ../ExamSys/examdialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QTimer \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qtimer.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qbasictimer.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QTextEdit \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qtextedit.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextdocument.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qpen.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QRadioButton \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qradiobutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QCheckBox \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qcheckbox.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QGridLayout \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
 		moc_predefs.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/bin/moc.exe
 	D:\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/C++/QtProject/build-ExamSys-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/moc_predefs.h -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/C++/QtProject/ExamSys -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.14.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\ExamSys\examdialog.h -o moc_examdialog.cpp
@@ -895,7 +917,40 @@ examdialog.o: ../ExamSys/examdialog.cpp ../ExamSys/examdialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QTimer \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qtimer.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qbasictimer.h
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qbasictimer.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QTextEdit \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qtextedit.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextdocument.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qpen.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QRadioButton \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qradiobutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QCheckBox \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qcheckbox.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QGridLayout \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QFile \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QTextStream \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QMessageBox \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qmessagebox.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QApplication \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o examdialog.o ..\ExamSys\examdialog.cpp
 
 main.o: ../ExamSys/main.cpp ../ExamSys/logindialog.h \
@@ -1010,7 +1065,33 @@ main.o: ../ExamSys/main.cpp ../ExamSys/logindialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
+		../ExamSys/examdialog.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QTimer \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qtimer.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qbasictimer.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QTextEdit \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qtextedit.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextdocument.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qpen.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QRadioButton \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qradiobutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qicon.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QCheckBox \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qcheckbox.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QGridLayout \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ..\ExamSys\main.cpp
 
 logindialog.o: ../ExamSys/logindialog.cpp ../ExamSys/logindialog.h \
@@ -1120,27 +1201,6 @@ logindialog.o: ../ExamSys/logindialog.cpp ../ExamSys/logindialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_logindialog.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QVariant \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QApplication \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLabel \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLineEdit \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlineedit.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qpen.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QMessageBox \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qmessagebox.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QFile \
