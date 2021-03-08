@@ -950,7 +950,9 @@ examdialog.o: ../ExamSys/examdialog.cpp ../ExamSys/examdialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o examdialog.o ..\ExamSys\examdialog.cpp
 
 main.o: ../ExamSys/main.cpp ../ExamSys/logindialog.h \

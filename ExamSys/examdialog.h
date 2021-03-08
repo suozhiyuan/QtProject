@@ -7,6 +7,7 @@
 #include <QRadioButton>
 #include <QCheckBox>
 #include <QGridLayout>
+#include <QButtonGroup>
 
 class ExamDialog : public QDialog
 {
@@ -16,13 +17,15 @@ public:
     void initTimer();       //初始化计时器
     void initLayout();      //初始化布局管理器
     bool initTextEdit();    //初始化文本编辑器
+    void initButtons();     //初始化按钮 标签
 
 private:
     QTimer* m_timer;                 //计时器， QTimer 类提供了重复的单次计时器
     int m_timeGo;                    //已用时
     QTextEdit* m_textEdit;           //题库显示， QTextEdit 类提供了一个用于编辑和显示纯文本和富文本的小部件。
     QLabel* m_titleLabels[10];       //题目标签， QLabel 小部件提供文本或图像显示。
-    QRadioButton *m_raidoBtns[32];   //单选题按钮， QRadioButton 小部件提供了一个带有文本标签的单选按钮。
+    QButtonGroup *m_btnGroups[9];     //对单选择题按钮进行分组，QButtonGroup类提供了一个容器来组织按钮小部件组。
+    QRadioButton *m_radioBtns[32];   //单选题按钮， QRadioButton 小部件提供了一个带有文本标签的单选按钮。
     QCheckBox *m_checkBtns[4];       //多选题按钮， QCheckBox 小部件提供了一个带有文本标签的复选框。
     QRadioButton *m_radioA;          //判断题A选项， QRadioButton 小部件提供了一个带有文本标签的单选按钮。
     QRadioButton *m_radioB;          //判断题B选项
