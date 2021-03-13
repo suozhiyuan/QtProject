@@ -159,8 +159,47 @@ void ExamDialog::initButtons()
     QPushButton *submitBtn = new QPushButton(this);
     submitBtn->setText("提交");
     submitBtn->setFixedSize(100, 35);
+    //connect 参数1 谁发信号  参数2 发什信号宏(点击信号)  参数3 谁响应  参数4 响应干嘛宏(提交)
+    connect(submitBtn, SIGNAL(click(bool)), this, SLOT(getScore()));
     m_layout->addWidget(submitBtn,6,9);
 
+}
+
+bool ExamDialog::hasNoSelect()
+{
+    int radioSelects = 0;
+    for (int i = 0; i < 8; i++)
+    {
+        if(m_btnGroups[i]->checkedButton())       //checkedButton 返回按钮组的选中按钮，如果没有选中按钮，则返回nullptr
+        {
+            radioSelects++;
+        }
+    }
+    if(radioSelects != 8)
+    {
+        return  true;
+    }
+
+    int checkSelects = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        if(m_checkBtns[i]->isChecked())            //isChecked 检查按钮是否被选中
+        {
+            checkSelects++;
+        }
+    }
+
+    if(checkSelects <= 4)
+    {
+        return true;
+    }
+
+    if(!m_radioA->isChecked() && !m_radioB->isChecked())
+    {
+        return true;
+    }
+
+    return false;
 }
 
 //刷新考试用时操作
@@ -170,6 +209,15 @@ void ExamDialog::freshTime()
     QString min = QString::number(m_timeGo / 60);       //QString::number 方法可以将数据转换字符串
     QString sec = QString::number(m_timeGo % 60);
     setWindowTitle("考试已用时：" + min + "分" + sec + "秒");
+}
+
+void ExamDialog::getScore()
+{
+    if(hasNoSelect())
+    {
+        QMessageBox::information(this, "提示", "有未完成的题目！", "是");
+        return;
+    }
 }
 
 

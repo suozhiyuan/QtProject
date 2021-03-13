@@ -18,6 +18,7 @@ public:
     void initLayout();      //初始化布局管理器
     bool initTextEdit();    //初始化文本编辑器
     void initButtons();     //初始化按钮 标签
+    bool hasNoSelect();     //判断题目是否全部完成
 
 private:
     QTimer* m_timer;                 //计时器， QTimer 类提供了重复的单次计时器
@@ -39,6 +40,7 @@ private slots：在这个区内声明的槽意味着只有类自己可以将信�
 */
 private slots:
     void freshTime();       //私有 响应的槽方法
+    void getScore();        //获取开始成绩
 };
 
 #endif // EXAMDIALOG_H
