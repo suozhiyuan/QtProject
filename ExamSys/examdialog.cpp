@@ -218,6 +218,60 @@ void ExamDialog::getScore()
         QMessageBox::information(this, "提示", "有未完成的题目！", "是");
         return;
     }
+
+    int scores = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        if(i < 8)
+        {
+            if(m_btnGroups[i]->checkedButton()->text() == m_answerList.at(i))     //获取按钮组中选中内容的文本  与 m_answerList的第 i 个进行对比
+            {
+                scores += 10;
+            }
+        }
+
+        //多项选择题计分
+        if(i == 8)
+        {
+            QString answer = m_answerList.at(i);        //提取答案字符串中的第 i 个内容
+            bool hasA = false;
+            bool hasB = false;
+            bool hasC = false;
+            bool hasD = false;
+
+            if(answer.contains("A")) hasA = true;          // 如果该字符串包含了str类型的字符串 A ，则返回true;否则返回false。
+            if(answer.contains("B")) hasB = true;
+            if(answer.contains("C")) hasC = true;
+            if(answer.contains("D")) hasD = true;
+
+            bool checkA = m_checkBtns[0]->checkState();     //返回复选框的选中状态。选中返回 true
+            bool checkB = m_checkBtns[1]->checkState();
+            bool checkC = m_checkBtns[2]->checkState();
+            bool checkD = m_checkBtns[3]->checkState();
+
+            if(hasA != checkA) continue;
+            if(hasB != checkB) continue;
+            if(hasC != checkC) continue;
+            if(hasD != checkD) continue;
+
+            scores += 10;
+        }
+
+        //判断题计分
+        if(i == 9)
+        {
+            if(m_btnGroups[8]->checkedButton()->text() == m_answerList.at(i))
+            {
+                scores += 10;
+            }
+        }
+        QString str =  "您的分数是：" + QString::number(scores) + "分。是否重新考试？";
+        int res = QMessageBox::information(this, "提示", str, QMessageBox::Yes | QMessageBox::No);
+        if(res == QMessageBox::Yes)
+            return;
+        else
+            close();
+    }
 }
 
 
