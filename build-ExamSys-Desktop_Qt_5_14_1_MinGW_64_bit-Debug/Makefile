@@ -672,6 +672,8 @@ moc_examdialog.cpp: ../ExamSys/examdialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QButtonGroup \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qbuttongroup.h \
 		moc_predefs.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/bin/moc.exe
 	D:\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\moc.exe $(DEFINES) --include D:/C++/QtProject/build-ExamSys-Desktop_Qt_5_14_1_MinGW_64_bit-Debug/moc_predefs.h -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/mkspecs/win32-g++ -ID:/C++/QtProject/ExamSys -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtANGLE -ID:/Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore -I. -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/Qt/Qt5.14.1/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Qt5.14.1/Tools/mingw730_64/x86_64-w64-mingw32/include ..\ExamSys\examdialog.h -o moc_examdialog.cpp
@@ -940,6 +942,8 @@ examdialog.o: ../ExamSys/examdialog.cpp ../ExamSys/examdialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QButtonGroup \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qbuttongroup.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QFile \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QTextStream \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QMessageBox \
@@ -1093,7 +1097,9 @@ main.o: ../ExamSys/main.cpp ../ExamSys/logindialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qgridlayout.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayout.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qboxlayout.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QButtonGroup \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qbuttongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ..\ExamSys\main.cpp
 
 logindialog.o: ../ExamSys/logindialog.cpp ../ExamSys/logindialog.h \
