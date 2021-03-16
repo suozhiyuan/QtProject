@@ -134,7 +134,7 @@ void ExamDialog::initButtons()
                 m_radioA = new QRadioButton(this);          //QRadioButton 小部件提供了一个带有文本标签的单选按钮。
                 m_radioB = new QRadioButton(this);
                 m_radioA->setText("正确");
-                m_radioA->setText("错误");
+                m_radioB->setText("错误");
 
                 m_layout->addWidget(m_radioA, 2, 9);        //添加到布局
                 m_layout->addWidget(m_radioB, 3, 9);
@@ -159,8 +159,8 @@ void ExamDialog::initButtons()
     QPushButton *submitBtn = new QPushButton(this);
     submitBtn->setText("提交");
     submitBtn->setFixedSize(100, 35);
-    //connect 参数1 谁发信号  参数2 发什信号宏(点击信号)  参数3 谁响应  参数4 响应干嘛宏(提交)
-    connect(submitBtn, SIGNAL(click(bool)), this, SLOT(getScore()));
+    //connect 参数1 谁发信号  参数2 发什信号宏clicked(点击信号)  参数3 谁响应  参数4 响应干嘛宏(提交)
+    connect(submitBtn, SIGNAL(clicked(bool)), this, SLOT(getScore()));
     m_layout->addWidget(submitBtn,6,9);
 
 }
@@ -189,7 +189,7 @@ bool ExamDialog::hasNoSelect()
         }
     }
 
-    if(checkSelects <= 4)
+    if(checkSelects <= 1)
     {
         return true;
     }
@@ -265,13 +265,13 @@ void ExamDialog::getScore()
                 scores += 10;
             }
         }
-        QString str =  "您的分数是：" + QString::number(scores) + "分。是否重新考试？";
-        int res = QMessageBox::information(this, "提示", str, QMessageBox::Yes | QMessageBox::No);
-        if(res == QMessageBox::Yes)
-            return;
-        else
-            close();
     }
+    QString str =  "您的分数是：" + QString::number(scores) + "分。是否重新考试？";
+    int res = QMessageBox::information(this, "提示", str, QMessageBox::Yes | QMessageBox::No);
+    if(res == QMessageBox::Yes)
+        return;
+    else
+        close();
 }
 
 
