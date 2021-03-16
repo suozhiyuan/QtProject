@@ -25,11 +25,13 @@ ExamDialog::ExamDialog(QWidget* parent):QDialog(parent)
     if(!initTextEdit())          //文本编辑器初始化
     {
         QMessageBox::information(this, "提示" ,"初始化题库数据文件失败！");
-        QTimer::singleShot(0, qApp, SLOT(QUIT()));      //间隔时间发送信号到槽，间隔多久 响应的槽（qapp为当前应用程序） 发送什么信号
+        QTimer::singleShot(0, qApp, SLOT(quit()));      //间隔时间发送信号到槽，间隔多久 响应的槽（qapp为当前应用程序） 发送什么信号
     }
 
     //初始化答题区
     initButtons();
+
+    show();
 }
 
 void ExamDialog::initTimer()
@@ -145,12 +147,10 @@ void ExamDialog::initButtons()
                 break;
             }
             else
-            {
-                //单选
+            { //单选
                 m_radioBtns[4 * i + j] = new QRadioButton(this);
                 m_radioBtns[4 * i + j]->setText(strList.at(j));
                 m_layout->addWidget(m_radioBtns[4 * i + j], 2+j, i);
-
                 m_btnGroups[i]->addButton(m_radioBtns[4 * i + j]);    //对按钮进行分组
             }
         }
@@ -256,7 +256,6 @@ void ExamDialog::getScore()
 
             scores += 10;
         }
-
         //判断题计分
         if(i == 9)
         {

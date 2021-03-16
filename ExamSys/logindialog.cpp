@@ -21,13 +21,15 @@ LoginDialog::~LoginDialog()
 
 void LoginDialog::on_loginBtn_clicked()
 {
-    //QMessageBox::information(this, "提示", "槽方法调用");
-    //正则验证邮箱地址 用户名@域名
-    //^ 开始 $ 结束
-    //+表示匹配次数 ≥1 次
-    //*表示匹配任意次数(可以是0次)
-    //{n.m}表示匹配次数至少n次,至多m次
-    // \\.   \\- 为转义，代表的就是 . -
+    /*
+    QMessageBox::information(this, "提示", "槽方法调用");
+    正则验证邮箱地址 用户名@域名
+    ^ 开始 $ 结束
+    +表示匹配次数 ≥1 次
+    *表示匹配任意次数(可以是0次)
+    {n.m}表示匹配次数至少n次,至多m次
+     \\.   \\- 为转义，代表的就是 . -
+    */
     QRegExp rx("^[A-Za-z0-9]+([_\\.][A-Za-z0-9]+)*@([A-Za-z0-9\\-]+\\.)+[A-Za-z]{2,6}$");
     bool res = rx.exactMatch(ui -> accountEdit -> text());                  // exactMatch 准确匹配控件中的文本信息 == ui 模块 accountEdit 的 text 文本信息
 
@@ -69,6 +71,8 @@ void LoginDialog::on_loginBtn_clicked()
                         QMessageBox::information(this,"提示","密码输入正确！");
                         isWin = true;
                         file.close();                   //关闭文件
+                        done(Accepted);                //关闭当前窗体，并且以指定的方式返回，Accepted 接受， Rejected 不接受
+                        return;
                     }
                 }
             }
@@ -89,4 +93,9 @@ void LoginDialog::on_loginBtn_clicked()
 
     }
 
+}
+
+void LoginDialog::on_cancelBtn_clicked()
+{
+    done(Rejected);              //关闭当前窗体，并且以指定的方式返回，Accepted 接受, Rejected 不接受
 }

@@ -18,6 +18,8 @@ public:
 private slots:      //私有槽方法
     void on_loginBtn_clicked();
 
+    void on_cancelBtn_clicked();
+
 private:
     Ui::LoginDialog *ui;
 };
