@@ -50,7 +50,7 @@ void LoginDialog::on_loginBtn_clicked()
         QString strLine;                           //用来保存每行读取的字符串
         QStringList strList;                       //字符串链表
 
-        filename = "../account.txt";
+        filename = "account.txt";
         strAccInput = ui->accountEdit->text();     //获取控件中的账号信息
         strCode = ui->codeEdit->text();            //获取控件中的密码信息
 

@@ -57,7 +57,7 @@ bool ExamDialog::initTextEdit()
 {
     QString strLine;                    //保存文件中读取到的一行数据
     QStringList strList;                //保存读取到的答案行, QStringList 类提供了一个字符串列表。
-    QString fileName("../exam.txt");
+    QString fileName("exam.txt");
     QFile file(fileName);               //操作文件，参数为文件路径 文件名, QFile 类提供了读取和写入文件的接口
     QTextStream stream(&file);          //文本文件流, QTextStream 类为读写文本提供了一个方便的接口
     stream.setCodec("UTF-8");

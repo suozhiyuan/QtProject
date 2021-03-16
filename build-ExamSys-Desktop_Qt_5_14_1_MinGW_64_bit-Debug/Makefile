@@ -20,7 +20,7 @@ CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra
 INCPATH       = -I..\ExamSys -I. -I..\..\..\Qt\Qt5.14.1\5.14.1\mingw73_64\include -I..\..\..\Qt\Qt5.14.1\5.14.1\mingw73_64\include\QtWidgets -I..\..\..\Qt\Qt5.14.1\5.14.1\mingw73_64\include\QtGui -I..\..\..\Qt\Qt5.14.1\5.14.1\mingw73_64\include\QtANGLE -I..\..\..\Qt\Qt5.14.1\5.14.1\mingw73_64\include\QtCore -I. -I. -I/include -I..\..\..\Qt\Qt5.14.1\5.14.1\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libQt5Widgets.a D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libQt5Gui.a D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libQt5Core.a  -lmingw32 D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
+LIBS        =        D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libQt5Widgets.a D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libQt5Gui.a D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libQt5Core.a ExamSys_resource_res.o  -lmingw32 D:\Qt\Qt5.14.1\5.14.1\mingw73_64\lib\libqtmain.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.7.25-winx64\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 
 QMAKE         = D:\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -41,7 +41,7 @@ IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = ExamSys_resource_res.o
 SED           = $(QMAKE) -install sed
 MOVE          = move
 
@@ -77,8 +77,11 @@ DESTDIR_TARGET = ExamSys.exe
 first: all
 all: Makefile  ExamSys.exe
 
-ExamSys.exe: D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Widgets.a D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Gui.a D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Core.a D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libqtmain.a ui_logindialog.h $(OBJECTS) 
+ExamSys.exe: D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Widgets.a D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Gui.a D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libQt5Core.a D:/Qt/Qt5.14.1/5.14.1/mingw73_64/lib/libqtmain.a ui_logindialog.h $(OBJECTS) ExamSys_resource_res.o
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
+
+ExamSys_resource_res.o: ExamSys_resource.rc
+	windres -i ExamSys_resource.rc -o ExamSys_resource_res.o --include-dir=. $(DEFINES)
 
 Makefile: ../ExamSys/ExamSys.pro ../../../Qt/Qt5.14.1/5.14.1/mingw73_64/mkspecs/win32-g++/qmake.conf ../../../Qt/Qt5.14.1/5.14.1/mingw73_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/mkspecs/qdevice.pri \
@@ -503,6 +506,7 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) examdialog.o main.o logindialog.o qrc_image.o moc_examdialog.o moc_logindialog.o
+	-$(DEL_FILE) ExamSys_resource_res.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -1209,6 +1213,27 @@ logindialog.o: ../ExamSys/logindialog.cpp ../ExamSys/logindialog.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qvector2d.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_logindialog.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QVariant \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QApplication \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qapplication.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/qeventloop.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qguiapplication.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qinputmethod.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLabel \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlabel.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qframe.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QLineEdit \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextcursor.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextformat.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qpen.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qtextoption.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QPushButton \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtGui/qicon.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/QMessageBox \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtWidgets/qmessagebox.h \
 		../../../Qt/Qt5.14.1/5.14.1/mingw73_64/include/QtCore/QFile \

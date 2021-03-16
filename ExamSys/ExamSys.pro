@@ -1,5 +1,5 @@
 QT       += core gui    #支持核心应用扩展库
-
+RC_ICONS += login.ico
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets     #支持组件编程扩展库， 当前Qt版本超过4
 
 CONFIG += c++11
