@@ -1,0 +1,6 @@
+ExamSys app 1.0
+Copyright （C）2021
+Author：SuoZhiYuan
+
+这是一个启蒙项目。
+
